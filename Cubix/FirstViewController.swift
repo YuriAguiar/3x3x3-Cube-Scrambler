@@ -24,9 +24,7 @@ class FirstViewController: UIViewController {
     
     @IBAction func generateSequence(_ sender: Any) {
         scrambledSequenceString = ""
-        
         scrambledSequence = scrambler.cubeScrambler(sequenceLength: sequenceLenghtConst, intervalLength: intervalLength)
-        
         scrambledSequence = checker.checkSequence(scrambledSequence: scrambledSequence, intervalLength: intervalLength)
         
         for move in scrambledSequence {

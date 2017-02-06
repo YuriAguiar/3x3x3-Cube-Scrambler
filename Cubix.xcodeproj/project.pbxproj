@@ -19,6 +19,7 @@
 		DA4A88E81E3E6DA400C139DF /* CubeMoves.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4A88E71E3E6DA400C139DF /* CubeMoves.swift */; };
 		DA4A88EA1E3E6DB000C139DF /* Semaphore.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4A88E91E3E6DB000C139DF /* Semaphore.swift */; };
 		DA4A88EC1E3E743800C139DF /* Checker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4A88EB1E3E743800C139DF /* Checker.swift */; };
+		DA676D4F1E48C8E000513865 /* 2LookOLL.pdf in Resources */ = {isa = PBXBuildFile; fileRef = DA676D4E1E48C8E000513865 /* 2LookOLL.pdf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		DA4A88E71E3E6DA400C139DF /* CubeMoves.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CubeMoves.swift; sourceTree = "<group>"; };
 		DA4A88E91E3E6DB000C139DF /* Semaphore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Semaphore.swift; sourceTree = "<group>"; };
 		DA4A88EB1E3E743800C139DF /* Checker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Checker.swift; sourceTree = "<group>"; };
+		DA676D4E1E48C8E000513865 /* 2LookOLL.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = 2LookOLL.pdf; path = ../../../../Desktop/2LookOLL.pdf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 				DA4A88E71E3E6DA400C139DF /* CubeMoves.swift */,
 				DA4A88E91E3E6DB000C139DF /* Semaphore.swift */,
 				DA4A88B91E3E6BB100C139DF /* SecondViewController.swift */,
+				DA676D4E1E48C8E000513865 /* 2LookOLL.pdf */,
 				DA4A88BE1E3E6BB100C139DF /* Assets.xcassets */,
 				DA4A88C01E3E6BB100C139DF /* LaunchScreen.storyboard */,
 				DA4A88BB1E3E6BB100C139DF /* Main.storyboard */,
@@ -252,6 +255,7 @@
 			files = (
 				DA4A88C21E3E6BB100C139DF /* LaunchScreen.storyboard in Resources */,
 				DA4A88BF1E3E6BB100C139DF /* Assets.xcassets in Resources */,
+				DA676D4F1E48C8E000513865 /* 2LookOLL.pdf in Resources */,
 				DA4A88BD1E3E6BB100C139DF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -532,6 +536,7 @@
 				DA4A88DE1E3E6BB100C139DF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DA4A88DF1E3E6BB100C139DF /* Build configuration list for PBXNativeTarget "CubixTests" */ = {
 			isa = XCConfigurationList;
@@ -540,6 +545,7 @@
 				DA4A88E11E3E6BB100C139DF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DA4A88E21E3E6BB100C139DF /* Build configuration list for PBXNativeTarget "CubixUITests" */ = {
 			isa = XCConfigurationList;
@@ -548,6 +554,7 @@
 				DA4A88E41E3E6BB100C139DF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

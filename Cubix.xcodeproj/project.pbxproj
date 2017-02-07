@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA2B89951E49495300A91696 /* 2LookOLL.pdf in Resources */ = {isa = PBXBuildFile; fileRef = DA2B89941E49495300A91696 /* 2LookOLL.pdf */; };
+		DA2B89971E49497000A91696 /* 2LookPLL.pdf in Resources */ = {isa = PBXBuildFile; fileRef = DA2B89961E49497000A91696 /* 2LookPLL.pdf */; };
+		DA2B89991E49497500A91696 /* F2L.pdf in Resources */ = {isa = PBXBuildFile; fileRef = DA2B89981E49497500A91696 /* F2L.pdf */; };
 		DA4A88B61E3E6BB100C139DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4A88B51E3E6BB100C139DF /* AppDelegate.swift */; };
 		DA4A88B81E3E6BB100C139DF /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4A88B71E3E6BB100C139DF /* FirstViewController.swift */; };
 		DA4A88BA1E3E6BB100C139DF /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4A88B91E3E6BB100C139DF /* SecondViewController.swift */; };
@@ -19,7 +22,6 @@
 		DA4A88E81E3E6DA400C139DF /* CubeMoves.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4A88E71E3E6DA400C139DF /* CubeMoves.swift */; };
 		DA4A88EA1E3E6DB000C139DF /* Semaphore.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4A88E91E3E6DB000C139DF /* Semaphore.swift */; };
 		DA4A88EC1E3E743800C139DF /* Checker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4A88EB1E3E743800C139DF /* Checker.swift */; };
-		DA676D4F1E48C8E000513865 /* 2LookOLL.pdf in Resources */ = {isa = PBXBuildFile; fileRef = DA676D4E1E48C8E000513865 /* 2LookOLL.pdf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DA2B89941E49495300A91696 /* 2LookOLL.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = 2LookOLL.pdf; path = Assets.xcassets/2LookOLL.pdf; sourceTree = "<group>"; };
+		DA2B89961E49497000A91696 /* 2LookPLL.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = 2LookPLL.pdf; path = Assets.xcassets/2LookPLL.pdf; sourceTree = "<group>"; };
+		DA2B89981E49497500A91696 /* F2L.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = F2L.pdf; path = Assets.xcassets/F2L.pdf; sourceTree = "<group>"; };
 		DA4A88B21E3E6BB100C139DF /* Cubix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cubix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA4A88B51E3E6BB100C139DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA4A88B71E3E6BB100C139DF /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -58,7 +63,6 @@
 		DA4A88E71E3E6DA400C139DF /* CubeMoves.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CubeMoves.swift; sourceTree = "<group>"; };
 		DA4A88E91E3E6DB000C139DF /* Semaphore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Semaphore.swift; sourceTree = "<group>"; };
 		DA4A88EB1E3E743800C139DF /* Checker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Checker.swift; sourceTree = "<group>"; };
-		DA676D4E1E48C8E000513865 /* 2LookOLL.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = 2LookOLL.pdf; path = ../../../../Desktop/2LookOLL.pdf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,10 +121,12 @@
 				DA4A88E71E3E6DA400C139DF /* CubeMoves.swift */,
 				DA4A88E91E3E6DB000C139DF /* Semaphore.swift */,
 				DA4A88B91E3E6BB100C139DF /* SecondViewController.swift */,
-				DA676D4E1E48C8E000513865 /* 2LookOLL.pdf */,
 				DA4A88BE1E3E6BB100C139DF /* Assets.xcassets */,
 				DA4A88C01E3E6BB100C139DF /* LaunchScreen.storyboard */,
 				DA4A88BB1E3E6BB100C139DF /* Main.storyboard */,
+				DA2B89981E49497500A91696 /* F2L.pdf */,
+				DA2B89961E49497000A91696 /* 2LookPLL.pdf */,
+				DA2B89941E49495300A91696 /* 2LookOLL.pdf */,
 			);
 			path = Cubix;
 			sourceTree = "<group>";
@@ -255,8 +261,10 @@
 			files = (
 				DA4A88C21E3E6BB100C139DF /* LaunchScreen.storyboard in Resources */,
 				DA4A88BF1E3E6BB100C139DF /* Assets.xcassets in Resources */,
-				DA676D4F1E48C8E000513865 /* 2LookOLL.pdf in Resources */,
+				DA2B89951E49495300A91696 /* 2LookOLL.pdf in Resources */,
+				DA2B89991E49497500A91696 /* F2L.pdf in Resources */,
 				DA4A88BD1E3E6BB100C139DF /* Main.storyboard in Resources */,
+				DA2B89971E49497000A91696 /* 2LookPLL.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

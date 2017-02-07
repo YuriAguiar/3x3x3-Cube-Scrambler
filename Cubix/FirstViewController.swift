@@ -11,8 +11,8 @@ import UIKit
 class FirstViewController: UIViewController {
     
     let intervalLength : Float = 1/18
-    let sequenceLenghtConst = 10
     
+    var sequenceLenght = 25
     var scrambledSequence : [CubeMoves] = []
     var scrambledSequenceString : String = ""
     var scrambler = Scrambler()
@@ -20,11 +20,13 @@ class FirstViewController: UIViewController {
 
     @IBOutlet weak var showSequence: UILabel!
     
-    @IBOutlet weak var sequenceLength: UITextField!
+    @IBOutlet weak var showSequenceLength: UILabel!
+    
+    @IBOutlet weak var sequenceStepperOutlet: UIStepper!
     
     @IBAction func generateSequence(_ sender: Any) {
         scrambledSequenceString = ""
-        scrambledSequence = scrambler.cubeScrambler(sequenceLength: sequenceLenghtConst, intervalLength: intervalLength)
+        scrambledSequence = scrambler.cubeScrambler(sequenceLength: sequenceLenght, intervalLength: intervalLength)
         scrambledSequence = checker.checkSequence(scrambledSequence: scrambledSequence, intervalLength: intervalLength)
         
         for move in scrambledSequence {
@@ -33,6 +35,11 @@ class FirstViewController: UIViewController {
         }
         
         showSequence.text = scrambledSequenceString
+    }
+    
+    @IBAction func sequenceStepperAction(_ sender: UIStepper) {
+        sequenceLenght = Int(sender.value)
+        showSequenceLength.text = Int(sender.value).description
     }
     
     override func viewDidLoad() {

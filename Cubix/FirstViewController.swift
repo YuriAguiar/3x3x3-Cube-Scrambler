@@ -7,22 +7,22 @@
 //
 
 import UIKit
+import QuartzCore
 
-class FirstViewController: UIViewController {
+class FirstViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     
     let intervalLength : Float = 1/18
     
     var sequenceLenght = 25
+    var availableSequenceLengths = ["25", "50", "75", "100"]
     var scrambledSequence : [CubeMoves] = []
     var scrambledSequenceString : String = ""
     var scrambler = Scrambler()
     var checker = Checker()
-
-    @IBOutlet weak var showSequence: UILabel!
     
-    @IBOutlet weak var showSequenceLength: UILabel!
+    @IBOutlet weak var scrambleButton: UIButton!
     
-    @IBOutlet weak var sequenceStepperOutlet: UIStepper!
+    @IBOutlet weak var showScrambledSequence: UITextView!
     
     @IBAction func generateSequence(_ sender: Any) {
         scrambledSequenceString = ""
@@ -34,22 +34,40 @@ class FirstViewController: UIViewController {
             scrambledSequenceString.append(" ")
         }
         
-        showSequence.text = scrambledSequenceString
+        showScrambledSequence.text = scrambledSequenceString
     }
     
-    @IBAction func sequenceStepperAction(_ sender: UIStepper) {
-        sequenceLenght = Int(sender.value)
-        showSequenceLength.text = Int(sender.value).description
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return availableSequenceLengths.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return availableSequenceLengths[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        if row == 0 {
+            sequenceLenght = 25
+        } else if row == 1 {
+            sequenceLenght = 50
+        } else if row == 2 {
+            sequenceLenght = 75
+        } else {
+            sequenceLenght = 100
+        }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        showScrambledSequence.textColor = UIColor.blue
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
 }

@@ -10,6 +10,23 @@ import UIKit
 
 enum CubeMoves: String {
     
-    case U, U_, U2, D, D_, D2, L, L_, L2, R, R_, R2, F, F_, F2, B, B_, B2
+    case U,
+    U_ = "U'",
+    U2,
+    D,
+    D_ = "D'",
+    D2,
+    L,
+    L_ = "L'",
+    L2,
+    R,
+    R_ = "R'",
+    R2,
+    F,
+    F_ = "F'",
+    F2,
+    B,
+    B_ = "B'",
+    B2
     
 }

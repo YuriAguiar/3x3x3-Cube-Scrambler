@@ -10,9 +10,9 @@ import UIKit
 
 public class Scrambler: NSObject {
     
-    func scramble(intervalLength : Float) -> CubeMoves {
+    func scramble(intervalLength: Float) -> CubeMoves {
         let intervalLength = intervalLength
-        var cubeMove : CubeMoves?
+        var cubeMove: CubeMoves?
         let chance = Float(CGFloat(Float(arc4random()) / Float(UINT32_MAX)))
         
         switch chance {
@@ -60,13 +60,13 @@ public class Scrambler: NSObject {
         return cubeMove!
     }
     
-    func cubeScrambler(sequenceLength : Int, intervalLength : Float) -> [CubeMoves] {
+    func cubeScrambler(sequenceLength: Int, intervalLength: Float) -> [CubeMoves] {
         let sequenceLength = sequenceLength
         let intervalLength = intervalLength
         var scrambledSequence = [CubeMoves]()
         
         for _ in 1...sequenceLength {
-            scrambledSequence.append(scramble(intervalLength : intervalLength))
+            scrambledSequence.append(scramble(intervalLength: intervalLength))
         }
         
         return scrambledSequence

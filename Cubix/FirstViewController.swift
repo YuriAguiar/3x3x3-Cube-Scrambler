@@ -11,59 +11,67 @@ import QuartzCore
 
 class FirstViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     
-    let intervalLength : Float = 1/18
+    let intervalLength: Float = 1/18
     
-    var sequenceLenght = 25
-    var availableSequenceLengths = ["25", "50", "75", "100"]
-    var scrambledSequence : [CubeMoves] = []
-    var scrambledSequenceString : String = ""
+    var sequenceLength = 25
+    var numberOfSequences = 1
+    var lengthAndNumberOfSequences = [["25", "50", "75", "100"], ["1", "2", "3", "4", "5"]]
+    var scrambledSequence: [CubeMoves] = []
+    var scrambledSequenceString = ""
     var scrambler = Scrambler()
     var checker = Checker()
+    var formatter = Formatter()
     
     @IBOutlet weak var scrambleButton: UIButton!
     
     @IBOutlet weak var showScrambledSequence: UITextView!
     
+    @IBOutlet weak var separateSequence: UISwitch!
+    
     @IBAction func generateSequence(_ sender: Any) {
-        scrambledSequenceString = ""
-        scrambledSequence = scrambler.cubeScrambler(sequenceLength: sequenceLenght, intervalLength: intervalLength)
-        scrambledSequence = checker.checkSequence(scrambledSequence: scrambledSequence, intervalLength: intervalLength)
-        
-        for move in scrambledSequence {
-            scrambledSequenceString.append(move.rawValue)
-            scrambledSequenceString.append(" ")
-        }
-        
-        showScrambledSequence.text = scrambledSequenceString
+        showScrambledSequence.text = formatter.repeater(sequenceLength: sequenceLength, intervalLength: intervalLength, numberOfSequeneces: numberOfSequences, separateSequenceSwitch: separateSequence.isOn)
+
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
+        return 2
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return availableSequenceLengths.count
+        return lengthAndNumberOfSequences[component].count
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return availableSequenceLengths[row]
+        return lengthAndNumberOfSequences[component][row]
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        if row == 0 {
-            sequenceLenght = 25
-        } else if row == 1 {
-            sequenceLenght = 50
-        } else if row == 2 {
-            sequenceLenght = 75
-        } else {
-            sequenceLenght = 100
+        if component == 0 && row == 0 {
+            sequenceLength = 25
+        } else if component == 0 && row == 1 {
+            sequenceLength = 50
+        } else if component == 0 && row == 2 {
+            sequenceLength = 75
+        } else if component == 0 && row == 3 {
+            sequenceLength = 100
+        } else if component == 1 && row == 0 {
+            numberOfSequences = 1
+        } else if component == 1 && row == 1 {
+            numberOfSequences = 2
+        } else if component == 1 && row == 2 {
+            numberOfSequences = 3
+        } else if component == 1 && row == 3 {
+            numberOfSequences = 4
+        } else if component == 1 && row == 4 {
+            numberOfSequences = 5
         }
+        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        showScrambledSequence.textColor = UIColor.blue
+//        showScrambledSequence.textColor = UIColor.blue
+        self.separateSequence.setOn(false, animated: true)
     }
 
     override func didReceiveMemoryWarning() {
